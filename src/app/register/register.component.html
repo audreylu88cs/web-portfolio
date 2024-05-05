@@ -1,0 +1,99 @@
+<div class="register">
+    <form [formGroup]="regForm" (ngSubmit)="submitRegister()">
+        <h4>Sign Up</h4><br>
+
+        <div class="row">
+            <div class="col">
+                <input type="string" class="form-control" formControlName="firstname" required placeholder="firstname">
+                <div *ngIf="firstname?.invalid && (firstname?.dirty || firstname?.touched)">
+                    <div *ngIf="firstname?.errors?.['required']">
+                        First name is required.
+                    </div>
+                </div>
+            </div><br>
+            <div class="col">
+                <input type="string" class="form-control" formControlName="lastname" placeholder="lastname">
+                <div *ngIf="lastname?.invalid && (lastname?.dirty || lastname?.touched)">
+                    <div *ngIf="lastname?.errors?.['required']">
+                        Last name is required.
+                    </div>
+                </div>
+            </div><br>
+        </div><br>
+
+        <div class="row">
+
+            <div class="col">
+                <input type="string" class="form-control" formControlName="phone" placeholder="123-123-1234">
+                <div *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)">
+                    <div *ngIf="phone?.errors?.['required']">
+                        Phone number is required.
+                    </div>
+                    <div *ngIf="phone?.errors?.['pattern']">
+                        Phone number must have 10 digits
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="col">
+                <input type="string" class="form-control" formControlName="zipcode" placeholder="12345">
+                <div *ngIf="zipcode?.invalid && (zipcode?.dirty || email?.touched)">
+                    <div *ngIf="zipcode?.errors?.['required']">
+                        Zipcode is required.
+                    </div>
+                    <div *ngIf="zipcode?.errors?.['pattern']">
+                        Zipcode must have 5 digits
+                    </div>
+                </div>
+            </div><br>
+
+
+        </div><br>
+
+        <input type="date" class="form-control" formControlName="dob" palcehodler="ex: mmddyyy">
+        <div *ngIf="dob?.invalid && (dob?.dirty || dob?.touched)">
+            <div *ngIf="dob?.errors?.['required']">
+                Date of birth is required.
+            </div>
+        </div><br>
+
+        <input type="string" class="form-control" formControlName="email" placeholder="email@email.com">
+        <div *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+            <div *ngIf="email?.errors?.['required']">
+                Email is required.
+            </div>
+            <div *ngIf="email?.errors?.['pattern']">
+                Email must include @
+            </div>
+        </div><br>
+
+        <input type="string" class="form-control" formControlName="username" placeholder="username">
+        <div *ngIf="username?.invalid && (username?.dirty || username?.touched)">
+            <div *ngIf="username?.errors?.['required']">
+                Username is required.
+            </div>
+        </div><br>
+
+        <input type="password" class="form-control" formControlName="password" placeholder="password">
+        <div *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+            <div *ngIf="password?.errors?.['required']">
+                Password is required.
+            </div>
+        </div><br>
+
+
+        <input type="status" class="form-control" formControlName="status" placeholder="how are you today">
+        <div *ngIf="status?.invalid && (status?.dirty || status?.touched)">
+            <div *ngIf="status?.errors?.['required']">
+                Status is required.
+            </div>
+        </div><br>
+
+        <div *ngIf="validUser">
+            This username is already in use. Login to your account or register with a different username.
+        </div>
+        <input class="btn btn-dark" type="submit" value="Register">
+
+    </form>
+    <button class="btn btn-link" (click)="loginEventEmit()">Sign into existing account</button>
+</div>
