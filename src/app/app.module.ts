@@ -16,6 +16,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { WebSkillsComponent } from './skills/web-skills/web-skills.component';
 import {RouterModule, Routes} from "@angular/router";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AIProjectsComponent } from './projects/aiprojects/aiprojects.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     WebProjectsComponent,
     SkillsComponent,
     WebSkillsComponent,
+    AIProjectsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,31 @@
+<navbar></navbar>
+<div class="container">
+    <div class="row align-items-center">
+      <div class="col" style="padding:2%">
+        <h1 style="font-family: Quicksand; text-align: center">AI/ML Projects</h1>
+        <div>
+          <h4 style="font-family: Quicksand; color: #ab3a3a; ">Autonomous Motion: Multi-Robot Motion Planning</h4>
+          <p>Implemented Discrete RRT (dRRT) which implicitly searches through a composite of multiple PRMs (Probabilistic Roadmap) to coordinate the centralized movement of multiple robots. 
+            Discrete RRT is a twist on Rapidly-Exploring Random Trees (RRT) that plans the movement of multiple robots simultaneously in a centralized and coordinated manner. 
+            Rapidly-Exploring Random Trees is a well-known motion planning algorithm which involves exploring a state space through extending a growing tree in the direction of randomly sampled states.
+            Upon implementing dRRT, we were able to coordinate the movements of 4-8 robots in two different environments. 1.) an narrow hallway where robots on opposite ends of the hallway must swap places and 2.) in a wide open space where robots stand in a circle and the robots facing each other must switch places.
+          </p>
+        </div>
+        <div>
+          <h4 style="font-family: Quicksand; color: #ab3a3a; ">Hand Gesture Recognition</h4>
+          <p>Leveraged Owl-ViT to draw a bounding-box around the raised hand, cropped the image around the boundding box and used a pretrained hand gesture classification model called MediaPipe Landmarks 
+            to outline each finger. Leveraged CLIP, an open access Visual Question Answering LLM model, to classify the gesture as One, Two, Three, Rock, Paper, Scissors, Fist, Like, Mute, Point, Palm, Peace etc.
+            Used HaGRID dataset, a hand gesture recognition image dataset with over 1 million RGB images and 33 gesture classification collected and annotated by Kapitanov et al. 
+          </p>
+          <img class="img-thumbnail" src="https://i.postimg.cc/y8Z3QdYZ/clip.png">
+        </div>
+        <br>
+        <div>
+          <h4 style="font-family: Quicksand; color: #ab3a3a; ">Reinforcement Learning: Minigrid Box Pickup Unlock</h4>
+          <p>Leveraged reward-shaping to program robot to autonomously move from room to room picking up a key and unlocking a box.</p>
+          <img class="img-thumbnail" src="https://i.postimg.cc/pXwQxQhR/Blocked-Unlock-Pickup-Env.gif">
+        </div>
+      </div>
+    </div>
+  </div>
+  
